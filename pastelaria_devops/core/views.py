@@ -3,10 +3,16 @@ from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 from .models import Produto
 from .forms import ProdutoForm
+import logging
+
+logger = logging.getLogger('django')
+level = logging.getLevelName('DEBUG')
+logger.setLevel(level)
 
 # Create your views here.
 
 def home_view(request):
+    logger.info(request)
     return render(request, 'home.html')
 
 def novo_produto_view(request):
