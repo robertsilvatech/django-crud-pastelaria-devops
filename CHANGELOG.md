@@ -1,5 +1,11 @@
 # Changelog
 
+## [Sem release]
+
+### Added 
+- Dockerfile com entrypoint
+- Configuração para expor os logs
+
 ## 0.0.1 - 2024-06-17
 
 ### Added 
