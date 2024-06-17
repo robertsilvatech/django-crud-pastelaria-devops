@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %} Novo Produto {% endblock %}
+{% block main %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Produtos</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    
+    <!-- Main content -->
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <section class="content">
+      <div class="container-fluid">
+        <!-- /.row -->
+        <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Deletar</h3>
+            </div>
+            <div class="card-body">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Nome</span>
+                </div>
+                <!-- <input type="text" class="form-control" placeholder="Nome"> -->
+                {{ form.nome }} 
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                {{ form.preco }} 
+              </div>       
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Estoque</span>
+                </div>
+                {{ form.qtd_estoque }} 
+              </div>
+              <div>
+                <p>Tem certeza que deseja deletar o produto {{ produto.nome }}?</p>                
+                <button type="submit" class="btn btn-primary">Deletar</button>
+              </div>        
+        </div>
+      </div>
+    </section>
+    </form>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+{% endblock %}
