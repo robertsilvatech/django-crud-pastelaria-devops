@@ -7,4 +7,8 @@ docker build -t robertsilvatech/django-crud-pastelaria-devops:${VERSION} -t robe
 
 docker push robertsilvatech/django-crud-pastelaria-devops:${VERSION} 
 docker push robertsilvatech/django-crud-pastelaria-devops:latest
+
+VERSION="0.0.2"
+docker build -t robertsilvatech/django-crud-pastelaria-devops:${VERSION} -t robertsilvatech/django-crud-pastelaria-devops:latest .
+
 ```
