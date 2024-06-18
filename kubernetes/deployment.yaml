@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: pastelaria-devops-demo
+  name: pastelaria-devops-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pastelaria-devops-demo
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: pastelaria-devops-demo
+    spec:
+      containers:
+      - image: robertsilvatech/django-crud-pastelaria-devops:0.0.2
+        imagePullPolicy: Always
+        name: django-crud-pastelaria-devops
+        resources: {}
+        ports:
+        - containerPort: 8000
+          name: django
+          protocol: TCP
+        env:
+          - name: COMPANY
+            value: PASTELARIA DEMO
+      restartPolicy: Always
+status: {}

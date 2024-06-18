@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  pastelaria-devops-demo:
+    image: robertsilvatech/django-crud-pastelaria-devops:0.0.2
+    environment:
+      COMPANY: "Pastelaria DEMO"
+    ports:
+      - 8000:8000

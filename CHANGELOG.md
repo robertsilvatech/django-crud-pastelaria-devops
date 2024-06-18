@@ -5,6 +5,8 @@
 ### Added 
 - Dockerfile com entrypoint
 - Configuração para expor os logs
+- docker-compose para deploy em Docker
+- Manifestos Kubernetes para Deploy no Kubernetes
 
 ## 0.0.1 - 2024-06-17
 

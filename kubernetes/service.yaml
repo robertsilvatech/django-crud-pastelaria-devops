@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: pastelaria-devops-demo
+  name: pastelaria-devops-demo
+spec:
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: pastelaria-devops-demo
+status:
+  loadBalancer: {}
